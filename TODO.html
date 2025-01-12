@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+
+    <input type="text" id="taskInput" placeholder="Enter your task">
+    <button id="plus">plus</button>
+    <ul id="list"></ul>
+    <script> 
+        document.getElementById("plus").addEventListener("click", addTask);
+
+        function addTask() {
+
+            const userInput = document.getElementById("taskInput").value;
+
+            if (userInput && userInput.trim() !== ""){
+                const newTask = document.createElement("li");
+
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+        
+                const taskText = document.createElement("span");
+                taskText.textContent = userInput;
+
+                const garbageCan = document.createElement("button");
+                garbageCan.textContent = "";
+
+                newTask.append(taskText);
+                newTask.append(checkbox);
+                newTask.append(garbageCan);
+                garbageCan.addEventListener("click", function(){
+                    newTask.remove();
+                })
+                checkbox.addEventListener("click", function(){
+                    if (checkbox.checked){
+                        taskText.style.textDecoration("line-through")}
+                })
+            } else{
+                alert("Task cannot be empty. Please enter a task");
+            }
+        }
+    </script>
+    
+
+    
+</body>
+</html>
