@@ -44,36 +44,37 @@
             transition-duration: 0.5s;
         }
 
-        .button1:hover{
-            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3), 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+        .taskInput{
+            font-size: 20px;
+            font-family: monospace;
+            background-color: #CBC3E3;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            border: 10px #5B3C88;
         }
 
-        h1{
-            background-color: #FDFDFF;
+        .plus{
+            font-size: 20px;
             font-family: monospace;
-            font-size: 300%;
-            text-align: center;
-            width: 350px;
-            
+            background-color: white;
+            border-radius: 8px;
         }
-        h2{
-            text-align: center;
-            color: black;
-            background-color: #FDFDFF;
-            font-family:monospace;
-            font-size: 200%;
-            width: 500px;
-            height: 50px;
+        
+        .list{
+            font-size: 20px;
+            font-family: monospace;
+
         }
+
         p{
             color: #FDFDFF;
             font-family: monospace;
             font-size: 160%;
             text-align: center;
-            margin-top: 350px;
+            margin-top: 330px;
         }
-        
-        
+
 
     </style>
 </head>
@@ -81,26 +82,26 @@
 <body>
     
     
-    <p> Mission: </p>
+    <p> Mission: To casually procrastinate interseller responsibilities!</p>
     <div class="center"> 
         <div>
             <button id="button1" class="button" style="margin-top: 150px;">Exploration</button>
             <input type="text" class="taskInput" placeholder="Enter your task">
-            <button class="plus">plus</button>
+            <button class="plus">+</button>
             <ul class="list" style="list-style-type: none;"> </ul>
             
         </div>
         <div>
             <button id ="button2" class="button " style="margin-top: 150px;">Spaceship Maintanence</button>
             <input type="text" class="taskInput" placeholder="Enter your task">
-                <button class="plus">plus</button>
+                <button class="plus">+</button>
                 <ul class="list" style="list-style-type: none;"> </ul>
                 
         </div>
         <div>
             <button id="button3" class="button" style="margin-top: 150px;">Daily Tasks</button>
             <input type="text" class="taskInput" placeholder="Enter your task">
-            <button class="plus">plus</button>
+            <button class="plus">+</button>
             <ul class="list" style="list-style-type: none;"> </ul>
         </div>
         <script> 
