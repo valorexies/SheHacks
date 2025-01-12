@@ -28,7 +28,10 @@
             align-items: center;
             display: flex;
             align-items: center;
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-around;
+            margin-top: 20px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -36,6 +39,16 @@
             transform: translate(-50%, -50%);
             padding-left: 50px;
         }
+
+        .list-container {
+        height: 200px; 
+        overflow-y: auto; 
+        border: 2px solid #5B3C88;  
+        border-radius: 8px;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #CBC3E3; 
+    }
 
 
         .button1{
@@ -88,21 +101,28 @@
             <button id="button1" class="button" style="margin-top: 150px;">Exploration</button>
             <input type="text" class="taskInput" placeholder="Enter your task">
             <button class="plus">+</button>
-            <ul class="list" style="list-style-type: none;"> </ul>
+            <div class="list-container">
+                <ul class="list" style="list-style-type: none;"> </ul>
+            </div>
+            
             
         </div>
         <div>
             <button id ="button2" class="button " style="margin-top: 150px;">Spaceship Maintanence</button>
             <input type="text" class="taskInput" placeholder="Enter your task">
-                <button class="plus">+</button>
+            <button class="plus">+</button>
+            <div class="list-container">
                 <ul class="list" style="list-style-type: none;"> </ul>
+            </div>
                 
         </div>
         <div>
             <button id="button3" class="button" style="margin-top: 150px;">Daily Tasks</button>
             <input type="text" class="taskInput" placeholder="Enter your task">
             <button class="plus">+</button>
-            <ul class="list" style="list-style-type: none;"> </ul>
+            <div class="list-container">
+                <ul class="list" style="list-style-type: none;"> </ul>
+            </div>
         </div>
         <script> 
         const plusButtons = document.querySelectorAll(".plus");
