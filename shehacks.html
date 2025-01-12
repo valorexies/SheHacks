@@ -21,7 +21,7 @@
             width: 100%;
             background-color: #D4D4D4;
             border-radius: 15px;
-            margin-right: 63px;
+            margin-right: 80px;
         }
 
         .center {
@@ -46,6 +46,7 @@
         border: 2px solid #5B3C88;  
         border-radius: 8px;
         margin-top: 10px;
+        margin-bottom: 50px;
         padding: 10px;
         background-color: #CBC3E3; 
     }
@@ -98,7 +99,7 @@
     <p> Mission: To casually procrastinate interseller responsibilities!</p>
     <div class="center"> 
         <div>
-            <button id="button1" class="button" style="margin-top: 150px;">Exploration</button>
+            <button id="button1" class="button" style="margin-top: 400px;">Exploration</button>
             <input type="text" class="taskInput" placeholder="Enter your task">
             <button class="plus">+</button>
             <div class="list-container">
@@ -108,7 +109,7 @@
             
         </div>
         <div>
-            <button id ="button2" class="button " style="margin-top: 150px;">Spaceship Maintanence</button>
+            <button id ="button2" class="button " style="margin-top: 400px;">Spaceship Maintanence</button>
             <input type="text" class="taskInput" placeholder="Enter your task">
             <button class="plus">+</button>
             <div class="list-container">
@@ -117,7 +118,7 @@
                 
         </div>
         <div>
-            <button id="button3" class="button" style="margin-top: 150px;">Daily Tasks</button>
+            <button id="button3" class="button" style="margin-top: 400px;">Daily Tasks</button>
             <input type="text" class="taskInput" placeholder="Enter your task">
             <button class="plus">+</button>
             <div class="list-container">
@@ -147,7 +148,7 @@
                 taskText.textContent = userInput;
 
                 const garbageCan = document.createElement("button");
-                garbageCan.textContent = "🗑️"; //add garbage can icon
+                garbageCan.textContent = "🗑️" ; //add garbage can icon
 
                 newTask.append(checkbox, taskText, garbageCan);
 
@@ -176,3 +177,4 @@
 </body>
 
 </html>
+
