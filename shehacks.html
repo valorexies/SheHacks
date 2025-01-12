@@ -70,18 +70,86 @@
             font-family: monospace;
             font-size: 160%;
             text-align: center;
+            margin-top: 350px;
         }
+        
+        
+
     </style>
 </head>
 
 <body>
-    <p></p>
-    <p> style="margin-top: 100px;" >Mission: </p>
     
+    
+    <p> Mission: </p>
     <div class="center"> 
-        <button id ="button1" class="button" style="margin-top: 150px;">Exploration</button>
-        <button id ="button2" class="button " style="margin-top: 150px;">Spaceship Maintanence</button>
-        <button id="button3" class="button" style="margin-top: 150px;">Daily Tasks</button>
+        <div>
+            <button id="button1" class="button" style="margin-top: 150px;">Exploration</button>
+            <input type="text" class="taskInput" placeholder="Enter your task">
+            <button class="plus">plus</button>
+            <ul class="list" style="list-style-type: none;"> </ul>
+            
+        </div>
+        <div>
+            <button id ="button2" class="button " style="margin-top: 150px;">Spaceship Maintanence</button>
+            <input type="text" class="taskInput" placeholder="Enter your task">
+                <button class="plus">plus</button>
+                <ul class="list" style="list-style-type: none;"> </ul>
+                
+        </div>
+        <div>
+            <button id="button3" class="button" style="margin-top: 150px;">Daily Tasks</button>
+            <input type="text" class="taskInput" placeholder="Enter your task">
+            <button class="plus">plus</button>
+            <ul class="list" style="list-style-type: none;"> </ul>
+        </div>
+        <script> 
+        const plusButtons = document.querySelectorAll(".plus");
+
+        plusButtons.forEach((button) => {
+
+            button.addEventListener("click", function () {
+            
+            const parentDiv = button.closest("div");
+
+            
+            const userInput = parentDiv.querySelector(".taskInput").value;
+            const taskList = parentDiv.querySelector(".list");
+
+            if (userInput && userInput.trim() !== ""){
+                const newTask = document.createElement("li");
+
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+        
+                const taskText = document.createElement("span");
+                taskText.textContent = userInput;
+
+                const garbageCan = document.createElement("button");
+                garbageCan.textContent = "🗑️"; //add garbage can icon
+
+                newTask.append(checkbox, taskText, garbageCan);
+
+            
+                taskList.appendChild(newTask);
+                
+                garbageCan.addEventListener("click", function(){
+                    newTask.remove();
+                })
+                checkbox.addEventListener("click", function(){
+                    if (checkbox.checked){
+                        taskText.style.textDecoration = "line-through"}
+                        else { 
+                    taskText.style.textDecoration = "none";
+                }
+                });
+                parentDiv.querySelector(".taskInput").value = ""; 
+            } else{
+                alert("Task cannot be empty. Please enter a task");
+            }
+        });
+        });
+    </script>
     </div>
    
 </body>
